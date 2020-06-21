@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PenaltySearchActivity"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="벌금 조회"
+        android:fontFamily="@font/dreambold"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:layout_margin="70dp"/>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center">
+        <TableRow>
+            <EditText
+                android:id="@+id/et_cnum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="조회할 차량 번호를 입력해주세요."/>
+            <Button
+                android:id="@+id/btn_penalty"
+                android:onClick="search_penalty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:text="검색"
+                android:fontFamily="@font/dreambold"
+                android:textColor="#ffffff"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="150dp"
+        >
+        <TableRow
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/dreambold"
+                android:text="차 소유자 이름" />
+            <TextView
+                android:id="@+id/tv_cowner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="검색 버튼을 누르세요" />
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/dreambold"
+                android:text="부과된 벌금" />
+            <TextView
+                android:id="@+id/tv_cpenatly"
+                android:layout_width="200dp"
+                android:textColor="#FF0000"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:text="검색 버튼을 누르세요"/>
+
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right"
+        android:src="@drawable/carpark3" />
+
+
+
+</LinearLayout>
